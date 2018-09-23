@@ -1,4 +1,4 @@
-package hw8.Observer;
+package hw1;
 
 public class StockEvent {
 	private String ticker;

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project name="Homework8" basedir="." default="test">
+<project name="Homework1" basedir="." default="test">
 	<property environment="env" />
 	<path id="test.classpath">
 		<pathelement path="${env.JUNIT}" />
 		<pathelement path="${env.HAMCREST_CORE}" />
-		<pathelement path="bin/src" />
-		<pathelement path="bin/test" />
+		<pathelement path="bin/src" />		
 	</path>
 
 	<target name="clean">
@@ -16,24 +15,21 @@
 
 	<target name="build" depends="clean">
 		<mkdir dir="bin" />
-		<mkdir dir="bin/src" />
-		<mkdir dir="bin/test" />
+		<mkdir dir="bin/src" />		
 	</target>
 
 	<target name="compile" depends="build">
-		<javac srcdir="src" destdir="bin/src" includeantruntime="false" />
-		<javac srcdir="test" destdir="bin/test" includeantruntime="false">
-			
-			<classpath refid="test.classpath" />
-		</javac>
+		<javac srcdir="src" destdir="bin/src" includeantruntime="false" />		
 	</target>
 
-	<!--<target name="run" depends="compile">
-		<java classname="exercise.Test">
-			<classpath path="bin" />
-		</java>
-	</target>-->
 	<target name="test" depends="compile">
+		<java classname="hw1.MainClient">
+			<classpath>
+				<path refid="test.classpath" />
+			</classpath>
+		</java>
+	</target>
+	<!--	<target name="test" depends="compile">
 		<junit printsummary="on" haltonfailure="yes" fork="true">
 			<classpath>
 				<path refid="test.classpath" />
@@ -44,5 +40,5 @@
 				
 			</batchtest>
 		</junit>
-	</target>
+	</target>-->
 </project>

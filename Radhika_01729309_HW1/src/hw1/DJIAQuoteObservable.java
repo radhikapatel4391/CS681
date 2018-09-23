@@ -1,4 +1,4 @@
-package hw8.Observer;
+package hw1;
 
 import java.util.HashSet;
 import java.util.Set;
