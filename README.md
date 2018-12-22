@@ -1,7 +1,7 @@
 # CS681
-HW 1:   Implement Observer with lambda expression 
-HW 2:   Implement Command method with lambda expression   
-HW 3:   Stream API with car arraylist for searching min,max,count,avg of car price. Using reduce() method 
+HW 1:   Implement Observer with lambda expression   
+HW 2:   Implement Command method with lambda expression    
+HW 3:   Stream API with car arraylist for searching min,max,count,avg of car price. Using reduce() method   
 HW 4:   Generate prime numbers with a stream. define StreamBasedRunnablePrimeGenerator   
 HW 5:   Define a lambda expression that computes prime numbers in a given range and pass it to Thread’s constructor.   
 HW 6:   Modify MCTest.java to use a lambda expression.   
