@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Homework9" basedir="." default="test">
+	<property environment="env" />
+	<path id="test.classpath">		
+		<pathelement path="class/src" />		
+	</path>
+
+	<target name="clean">
+		<delete dir="class" />
+	</target>
+
+
+	<target name="build" depends="clean">
+		<mkdir dir="class" />
+		<mkdir dir="class/src" />		
+	</target>
+
+	<target name="compile" depends="build">
+		<javac srcdir="src" destdir="class/src" includeantruntime="false" />		
+	</target>
+
+	<target name="test" depends="compile">
+		<java classname="hw9.Main">
+			<classpath>
+				<path refid="test.classpath" />
+			</classpath>			
+		</java>
+	</target>	
+	
+</project>
